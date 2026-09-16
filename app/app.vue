@@ -7,9 +7,10 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
+  <NuxtLoadingIndicator />
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style>
@@ -17,6 +18,13 @@ useHead({
   transition: opacity 0.5s;
 }
 .page-enter, .page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+.layout-enter-active, .layout-leave-active {
+  transition: opacity 0.5s, filter 0.5s;
+}
+.layout-enter, .layout-leave-to {
   opacity: 0;
   filter: blur(1rem);
 }

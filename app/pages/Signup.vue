@@ -66,7 +66,9 @@ useHead({
     ],
     title: 'signup'
 })
-
+definePageMeta({
+    layout: 'intro'
+})
 </script>
 
 <template>

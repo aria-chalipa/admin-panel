@@ -4,8 +4,10 @@ import { defineRule } from 'vee-validate';
 import { required } from '@vee-validate/rules';
 import axios from '~/axios/axios';
 import ModalCom from '~/components/ModalCom.vue';
+import { useUserStore } from '~/stores/useUserStore';
 
 const router = useRouter()
+const store = useUserStore()
 defineRule("req", required)
 
 const email = ref('')
@@ -20,10 +22,8 @@ async function handleSubmit() {
         const res = await axios.get('/users')
         user.value = res.data
         const foundUser = user.value.find(user => user.password === password.value && user.email === email.value);
-
-        console.log(user.value)
         if (foundUser) {
-            
+            store.setUser(foundUser)
             router.push(`/panel-${foundUser.name}/${foundUser.id}`)
         } else {
             errorMessage.value = 'Invalid email or password'
@@ -47,9 +47,13 @@ useHead({
     ],
     title: 'login'
 })
+definePageMeta({
+    layout: 'intro'
+})
 </script>
 
 <template>
+  <div>
     <div class="relative flex min-h-screen items-center justify-center overflow-hidden bg-gray-950 px-4 py-12">
         <!-- ambient background glow -->
         <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-yellow-400/20 blur-3xl"></div>
@@ -109,7 +113,10 @@ useHead({
 
     </div>
         <ModalCom v-model="handeleModal">
-            <template #title>{{ errorMessage }}</template>
+            <template #title>
+                <h2 class="text-red-500 ">{{ errorMessage }}</h2>
+            </template>
             <template #body>please check your email and password</template>
         </ModalCom>
+  </div>
 </template>
