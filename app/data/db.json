@@ -35,5 +35,25 @@
       "id": "xhK5LsdpLqs"
     }
   ],
+  "notes": [
+    {
+      "userId": "lP_iaQNXQRY",
+      "title": "first",
+      "content": "is it working",
+      "id": "gPPGT5rAswY"
+    },
+    {
+      "userId": "lP_iaQNXQRY",
+      "title": "second",
+      "content": "it is working",
+      "id": "_eerm1xsypk"
+    },
+    {
+      "userId": "xhK5LsdpLqs",
+      "title": "error",
+      "content": "page error",
+      "id": "UBr4WiCDi-Q"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

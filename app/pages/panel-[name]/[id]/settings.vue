@@ -40,12 +40,13 @@
 
 <script lang="ts" setup>
 import AlertCom from '~/components/AlertCom.vue'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import axios from '~/axios/axios'
+import { useUserStore, type User } from '~/stores/useUserStore'
 
 const alertVisible = ref(false)
 const alertMessage = ref('')
-const user = ref({})
+const user = ref<User>({})
 const store = useUserStore()
 const handeleModal = ref(false)
 const password = ref('')

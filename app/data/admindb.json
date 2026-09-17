@@ -1,0 +1,32 @@
+{
+    "admins": [
+        {
+            "id": "1",
+            "name": "Admin User",
+            "field": "human resources", 
+            "role": "admin",
+            "requests": []
+        },
+        {
+            "id": "2",
+            "name": "Second Admin",
+            "field": "finance", 
+            "role": "admin",
+            "requests": []
+        },
+        {
+            "id": "3",
+            "name": "Third Admin",
+            "field": "IT", 
+            "role": "admin",
+            "requests": []
+        },
+        {
+            "id": "4",
+            "name": "Fourth Admin",
+            "field": "marketing", 
+            "role": "admin",
+            "requests": []
+        }
+    ]
+}
