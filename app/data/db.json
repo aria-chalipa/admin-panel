@@ -55,5 +55,6 @@
       "id": "UBr4WiCDi-Q"
     }
   ],
-  "$schema": "./node_modules/json-server/schema.json"
+  "issues": [],
+  "$schema": "../../node_modules/json-server/schema.json"
 }

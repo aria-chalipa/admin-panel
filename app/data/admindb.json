@@ -1,32 +1,71 @@
 {
-    "admins": [
+  "admins": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "field": "human resources",
+      "role": "admin",
+      "requests": [
         {
-            "id": "1",
-            "name": "Admin User",
-            "field": "human resources", 
-            "role": "admin",
-            "requests": []
+          "option": "human resources",
+          "content": "you are fucked\n",
+          "user": {
+            "name": "soheil2",
+            "lastName": "riazii",
+            "email": "saed@example.com",
+            "password": "654321",
+            "id": "xhK5LsdpLqs"
+          },
+          "admin": "1"
         },
         {
-            "id": "2",
-            "name": "Second Admin",
-            "field": "finance", 
-            "role": "admin",
-            "requests": []
-        },
-        {
-            "id": "3",
-            "name": "Third Admin",
-            "field": "IT", 
-            "role": "admin",
-            "requests": []
-        },
-        {
-            "id": "4",
-            "name": "Fourth Admin",
-            "field": "marketing", 
-            "role": "admin",
-            "requests": []
+          "option": "human resources",
+          "content": "jhgjhgvfjhgvf 1",
+          "user": {
+            "name": "soheil2",
+            "lastName": "riazii",
+            "email": "saed@example.com",
+            "password": "654321",
+            "id": "xhK5LsdpLqs"
+          },
+          "admin": "1"
         }
-    ]
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Second Admin",
+      "field": "finance",
+      "role": "admin",
+      "requests": [
+        {
+          "option": "finance",
+          "content": "sooooooome",
+          "user": {
+            "name": "soheil2",
+            "lastName": "riazii",
+            "email": "saed@example.com",
+            "password": "654321",
+            "id": "xhK5LsdpLqs"
+          },
+          "admin": "2"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Third Admin",
+      "field": "IT",
+      "role": "admin",
+      "requests": []
+    },
+    {
+      "id": "4",
+      "name": "Fourth Admin",
+      "field": "marketing",
+      "role": "admin",
+      "requests": []
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

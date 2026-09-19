@@ -22,7 +22,7 @@
       
     </div>
 
-    <ModalCom v-model="handeleModal">
+    <ModalCom v-model="handeleModal" @close="handeleModal = false">
       <template #title>Add Note</template>
       <template #body>
         <label class="block text-sm font-medium text-white">Title</label>
